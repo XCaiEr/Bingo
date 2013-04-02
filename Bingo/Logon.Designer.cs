@@ -1,6 +1,6 @@
 ﻿namespace Bingo
 {
-    partial class Bingo
+    partial class Logon
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Logon));
             this.labAccName = new System.Windows.Forms.Label();
             this.labPassword = new System.Windows.Forms.Label();
             this.cbRemenber = new System.Windows.Forms.CheckBox();
@@ -36,6 +37,7 @@
             this.btLogon = new System.Windows.Forms.Button();
             this.labSign = new System.Windows.Forms.Label();
             this.btExit = new System.Windows.Forms.Button();
+            this.labTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labAccName
@@ -74,7 +76,7 @@
             this.txbAccentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.txbAccentName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbAccentName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txbAccentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txbAccentName.ForeColor = System.Drawing.Color.Silver;
             this.txbAccentName.Location = new System.Drawing.Point(60, 38);
             this.txbAccentName.MaxLength = 100;
             this.txbAccentName.Name = "txbAccentName";
@@ -86,6 +88,7 @@
             this.txbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.txbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPassword.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txbPassword.ForeColor = System.Drawing.Color.Silver;
             this.txbPassword.Location = new System.Drawing.Point(60, 73);
             this.txbPassword.MaxLength = 16;
             this.txbPassword.Name = "txbPassword";
@@ -135,7 +138,20 @@
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.OnButtonExit);
             // 
-            // Bingo
+            // labTitle
+            // 
+            this.labTitle.AutoSize = true;
+            this.labTitle.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.labTitle.Location = new System.Drawing.Point(-13, -12);
+            this.labTitle.Name = "labTitle";
+            this.labTitle.Size = new System.Drawing.Size(123, 46);
+            this.labTitle.TabIndex = 9;
+            this.labTitle.Text = "Bingo";
+            this.labTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bingo_MouseDown);
+            this.labTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bingo_MouseMove);
+            // 
+            // Logon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,6 +159,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(250, 160);
             this.ControlBox = false;
+            this.Controls.Add(this.labTitle);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.labSign);
             this.Controls.Add(this.btLogon);
@@ -154,9 +171,11 @@
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
-            this.Name = "Bingo";
+            this.Name = "Logon";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logon";
@@ -179,6 +198,7 @@
         private System.Windows.Forms.Button btLogon;
         private System.Windows.Forms.Label labSign;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Label labTitle;
     }
 }
 

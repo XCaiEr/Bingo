@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Bingo
 {
-    public partial class Bingo : Form
+    public partial class Logon : Form
     {
-        public Bingo()
+        public Logon()
         {
             InitializeComponent();
         }
@@ -56,7 +56,12 @@ namespace Bingo
             if (sAccentName.Length == 0)
             {
                 this.txbAccentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+                return;
             }
+
+            this.Hide();
+            Friends wndFriends = new Friends();
+            wndFriends.ShowDialog();
         }
 
         private void OnSigh(object sender, EventArgs e)
