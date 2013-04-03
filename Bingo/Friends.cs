@@ -43,6 +43,7 @@ namespace Bingo
 
         private void btExit_Click(object sender, EventArgs e)
         {
+            notifyBingo.Visible = false;
             Application.Exit();
         }
 
@@ -77,6 +78,27 @@ namespace Bingo
         {
             About wndAbout = new About();
             wndAbout.Show();
+        }
+
+        private bool bMore = false;
+        private void btMore_Click(object sender, EventArgs e)
+        {
+            if (bMore == false)
+            {
+                bMore = true;
+                this.Height = 250;
+                this.Visible = true;
+                Point ptOffset = new Point(this.btMore.Location.X, this.btMore.Location.Y + 130);
+                this.btMore.Location = ptOffset;
+            }
+            else
+            {
+                bMore = false;
+                this.Height = 120;
+                this.Visible = true;
+                Point ptOffset = new Point(this.btMore.Location.X, this.btMore.Location.Y - 130);
+                this.btMore.Location = ptOffset;
+            }
         }
     }
 }

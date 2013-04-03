@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo", "Bingo\Bingo.csproj", "{9694C2B1-2BC2-4BC5-80CC-CF868CE4B1EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoClient", "Bingo\BingoClient.csproj", "{9694C2B1-2BC2-4BC5-80CC-CF868CE4B1EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

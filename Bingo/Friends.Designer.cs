@@ -37,8 +37,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.notifyBingo = new System.Windows.Forms.NotifyIcon(this.components);
             this.NotifyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.NotifyMenuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.NotifyMenuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.NotifyMenuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.btMore = new System.Windows.Forms.Button();
             this.NotifyMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,9 @@
             // btExit
             // 
             this.btExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.btExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btExit.ForeColor = System.Drawing.Color.Silver;
@@ -82,6 +86,9 @@
             // btMin
             // 
             this.btMin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.btMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMin.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btMin.ForeColor = System.Drawing.Color.Silver;
@@ -95,7 +102,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
@@ -122,6 +129,13 @@
             this.NotifyMenu.Name = "NotifyMenu";
             this.NotifyMenu.Size = new System.Drawing.Size(99, 48);
             // 
+            // NotifyMenuAbout
+            // 
+            this.NotifyMenuAbout.Name = "NotifyMenuAbout";
+            this.NotifyMenuAbout.Size = new System.Drawing.Size(98, 22);
+            this.NotifyMenuAbout.Text = "关于";
+            this.NotifyMenuAbout.Click += new System.EventHandler(this.Friends_About);
+            // 
             // NotifyMenuExit
             // 
             this.NotifyMenuExit.Name = "NotifyMenuExit";
@@ -129,19 +143,30 @@
             this.NotifyMenuExit.Text = "退出";
             this.NotifyMenuExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // 关于ToolStripMenuItem
+            // btMore
             // 
-            this.NotifyMenuAbout.Name = "关于MenuItem";
-            this.NotifyMenuAbout.Size = new System.Drawing.Size(98, 22);
-            this.NotifyMenuAbout.Text = "关于";
-            this.NotifyMenuAbout.Click += new System.EventHandler(this.Friends_About);
+            this.btMore.FlatAppearance.BorderSize = 0;
+            this.btMore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.btMore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMore.Font = new System.Drawing.Font("宋体", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btMore.ForeColor = System.Drawing.Color.Silver;
+            this.btMore.Location = new System.Drawing.Point(0, 105);
+            this.btMore.Name = "btMore";
+            this.btMore.Size = new System.Drawing.Size(400, 15);
+            this.btMore.TabIndex = 12;
+            this.btMore.Text = "•••";
+            this.btMore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btMore.UseVisualStyleBackColor = true;
+            this.btMore.Click += new System.EventHandler(this.btMore_Click);
             // 
             // Friends
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(400, 80);
+            this.ClientSize = new System.Drawing.Size(400, 120);
+            this.Controls.Add(this.btMore);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btMin);
             this.Controls.Add(this.btExit);
@@ -175,5 +200,6 @@
         private System.Windows.Forms.ContextMenuStrip NotifyMenu;
         private System.Windows.Forms.ToolStripMenuItem NotifyMenuExit;
         private System.Windows.Forms.ToolStripMenuItem NotifyMenuAbout;
+        private System.Windows.Forms.Button btMore;
     }
 }
