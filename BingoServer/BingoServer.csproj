@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9694C2B1-2BC2-4BC5-80CC-CF868CE4B1EA}</ProjectGuid>
+    <ProjectGuid>{3614AC7E-8079-4FFD-81CF-D544B43C42A5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bingo</RootNamespace>
-    <AssemblyName>Bingo</AssemblyName>
+    <RootNamespace>BingoServer</RootNamespace>
+    <AssemblyName>BingoServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Bingo.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,35 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.cs">
+    <Compile Include="BingoServer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
-      <DependentUpon>About.cs</DependentUpon>
+    <Compile Include="BingoServer.Designer.cs">
+      <DependentUpon>BingoServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Friends.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Friends.Designer.cs">
-      <DependentUpon>Friends.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Logon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Logon.Designer.cs">
-      <DependentUpon>Logon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NetworkMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="About.resx">
-      <DependentUpon>About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Friends.resx">
-      <DependentUpon>Friends.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Logon.resx">
-      <DependentUpon>Logon.cs</DependentUpon>
+    <EmbeddedResource Include="BingoServer.resx">
+      <DependentUpon>BingoServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,12 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Bingo.ico" />
-    <Content Include="Resources\Bingo icon.png" />
-    <Content Include="Resources\Bingo.ico" />
-    <Content Include="Resources\BingoSmall.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

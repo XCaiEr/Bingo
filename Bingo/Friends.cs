@@ -100,5 +100,11 @@ namespace Bingo
                 this.btMore.Location = ptOffset;
             }
         }
+
+        private void labTitle_Click(object sender, EventArgs e)
+        {
+            this.Height += 80;
+            this.Visible = true;
+        }
     }
 }

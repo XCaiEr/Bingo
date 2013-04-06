@@ -50,23 +50,79 @@ namespace Bingo
             Application.Exit();
         }
 
+        private void AccentGotFocus(object sender, EventArgs e)
+        {
+            if (this.txbAccentName.Text == "请输入账户名" || this.txbAccentName.Text == "账户名不能为空！")
+            {
+                this.txbAccentName.Text = "";
+                this.txbAccentName.BackColor = System.Drawing.Color.FromArgb(68, 68, 68);
+            }
+            else
+            {
+                this.txbAccentName.SelectAll();
+            }
+            this.txbAccentName.ForeColor = System.Drawing.Color.FromArgb(145, 145, 145);
+        }
+
+        private void AccentLostFocus(object sender, EventArgs e)
+        {
+            if (this.txbAccentName.Text.Length == 0)
+            {
+                this.txbAccentName.Text = "请输入账户名";
+                this.txbAccentName.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void PasswordGotFocus(object sender, EventArgs e)
+        {
+            if (this.txbPassword.Text == "请输入密码" || this.txbPassword.Text == "密码不能为空！")
+            {
+                this.txbPassword.PasswordChar = '●';
+                this.txbPassword.Text = "";
+                this.txbPassword.BackColor = System.Drawing.Color.FromArgb(68, 68, 68);
+            }
+            this.txbPassword.ForeColor = System.Drawing.Color.FromArgb(145, 145, 145);
+        }
+
+        private void PasswordLostFocus(object sender, EventArgs e)
+        {
+            if (this.txbPassword.Text.Length == 0)
+            {
+                this.txbPassword.PasswordChar = '\0';
+                this.txbPassword.Text = "请输入密码";
+                this.txbPassword.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
         private void OnButtonLogon(object sender, EventArgs e)
         {
             string sAccentName = this.txbAccentName.Text;
-            if (sAccentName.Length == 0)
+            if (sAccentName == "请输入账户名")
             {
-                this.txbAccentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+                this.txbAccentName.BackColor = System.Drawing.Color.FromArgb(128, 28, 28);
+                this.txbAccentName.Text = "账户名不能为空！";
+                return;
+            }
+            if (this.txbPassword.Text == "请输入密码")
+            {
+                this.txbPassword.BackColor = System.Drawing.Color.FromArgb(128, 28, 28);
+                this.txbPassword.Text = "密码不能为空！";
                 return;
             }
 
-            this.Hide();
-            Friends wndFriends = new Friends();
-            wndFriends.ShowDialog();
+            //this.Hide();
+            //Friends wndFriends = new Friends();
+            //wndFriends.ShowDialog();
         }
 
         private void OnSigh(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.baidu.com");
+        }
+
+        public void OnLogonFailed()
+        {
+            this.btLogon.Text = "登陆失败！";
         }
     }
 }

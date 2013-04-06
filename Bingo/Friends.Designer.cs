@@ -54,6 +54,7 @@
             this.labTitle.Size = new System.Drawing.Size(71, 27);
             this.labTitle.TabIndex = 0;
             this.labTitle.Text = "Bingo";
+            this.labTitle.Click += new System.EventHandler(this.labTitle_Click);
             // 
             // labState
             // 

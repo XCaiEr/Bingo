@@ -76,25 +76,30 @@
             this.txbAccentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.txbAccentName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbAccentName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txbAccentName.ForeColor = System.Drawing.Color.Silver;
+            this.txbAccentName.ForeColor = System.Drawing.Color.Gray;
             this.txbAccentName.Location = new System.Drawing.Point(60, 38);
             this.txbAccentName.MaxLength = 100;
             this.txbAccentName.Name = "txbAccentName";
             this.txbAccentName.Size = new System.Drawing.Size(155, 16);
             this.txbAccentName.TabIndex = 3;
+            this.txbAccentName.Text = "请输入账户名";
+            this.txbAccentName.GotFocus += new System.EventHandler(this.AccentGotFocus);
+            this.txbAccentName.LostFocus += new System.EventHandler(this.AccentLostFocus);
             // 
             // txbPassword
             // 
             this.txbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.txbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPassword.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txbPassword.ForeColor = System.Drawing.Color.Silver;
+            this.txbPassword.ForeColor = System.Drawing.Color.Gray;
             this.txbPassword.Location = new System.Drawing.Point(60, 73);
             this.txbPassword.MaxLength = 16;
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(155, 16);
             this.txbPassword.TabIndex = 4;
+            this.txbPassword.Text = "请输入密码";
+            this.txbPassword.GotFocus += new System.EventHandler(this.PasswordGotFocus);
+            this.txbPassword.LostFocus += new System.EventHandler(this.PasswordLostFocus);
             // 
             // btLogon
             // 
@@ -104,8 +109,8 @@
             this.btLogon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.btLogon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btLogon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLogon.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btLogon.ForeColor = System.Drawing.Color.Silver;
+            this.btLogon.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btLogon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.btLogon.Location = new System.Drawing.Point(0, 120);
             this.btLogon.Name = "btLogon";
             this.btLogon.Size = new System.Drawing.Size(250, 40);
