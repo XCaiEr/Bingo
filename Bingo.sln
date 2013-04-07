@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoClient", "Bingo\BingoC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoServer", "BingoServer\BingoServer.csproj", "{3614AC7E-8079-4FFD-81CF-D544B43C42A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoPictureView", "BingoPictureView\BingoPictureView.csproj", "{49DDCF62-BB10-4B52-8E8D-08FDA303AB93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3614AC7E-8079-4FFD-81CF-D544B43C42A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3614AC7E-8079-4FFD-81CF-D544B43C42A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3614AC7E-8079-4FFD-81CF-D544B43C42A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49DDCF62-BB10-4B52-8E8D-08FDA303AB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DDCF62-BB10-4B52-8E8D-08FDA303AB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DDCF62-BB10-4B52-8E8D-08FDA303AB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DDCF62-BB10-4B52-8E8D-08FDA303AB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

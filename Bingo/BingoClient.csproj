@@ -105,6 +105,12 @@
     <Content Include="Resources\Bingo.ico" />
     <Content Include="Resources\BingoSmall.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BingoPictureView\BingoPictureView.csproj">
+      <Project>{49ddcf62-bb10-4b52-8e8d-08fda303ab93}</Project>
+      <Name>BingoPictureView</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
